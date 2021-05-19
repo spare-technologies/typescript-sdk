@@ -3,7 +3,8 @@ import {SpDomesticPayment} from "../Models/Payment/Domestic/SpDomesticPayment";
 import {SpDomesticPaymentResponse} from "../Models/Payment/Domestic/SpDomesticPaymentResponse";
 import {SpPaymentClientOptions} from "./SpPaymentClientOptions";
 import {SpEndpoints} from "./SpEndpoints";
-import {deserialize, IGenericObject} from '@mdtalel/json-typescript-mapper2/index';
+import {deserialize, serialize} from 'typescript-json-serializer';
+
 import {SpareSdkResponse} from "../Models/Response/SpareSdkResponse";
 
 const axios = require('axios').default;
@@ -31,11 +32,10 @@ export class SpPaymentClient implements ISpPaymentClient {
             method: 'post',
             url: this.GetUrl(SpEndpoints.CreateDomesticPayment),
             headers: this.headers,
-            data: {
-                payment: payment
-            }
+            data: { payment }
         })
-        return response.data.data;
+        const model = deserialize<SpareSdkResponse<SpDomesticPaymentResponse, object>>(response.data, SpareSdkResponse);
+        return serialize(model.Data);
     }
 
     async GetDomesticPayment(id: string) {
@@ -47,7 +47,8 @@ export class SpPaymentClient implements ISpPaymentClient {
             },
             headers: this.headers
         })
-        return response.data.data;
+        const model = deserialize<SpareSdkResponse<SpDomesticPaymentResponse, object>>(response.data, SpareSdkResponse);
+        return serialize(model.Data);
     }
 
     async ListDomesticPayments(start: number, perPage: number) {
@@ -60,6 +61,7 @@ export class SpPaymentClient implements ISpPaymentClient {
             },
             headers: this.headers
         })
-        return response.data.data;
+        const model = deserialize<SpareSdkResponse<SpDomesticPaymentResponse[], object>>(response.data, SpareSdkResponse);
+        return serialize(model.Data);
     }
 }

@@ -1,24 +1,27 @@
 import {SpDomesticPayment} from "./SpDomesticPayment";
 import {SpUserAccount} from "../Account/SpUserAccount";
 import {SpPaymentUserAccount} from "../Account/SpPaymentUserAccount";
-import {JsonProperty} from '@mdtalel/json-typescript-mapper2/index';
+import {deserialize, JsonProperty, Serializable} from 'typescript-json-serializer';
+
 import {SpPaymentSource} from "../../../Enum/Payment/SpPaymentSource";
+
+@Serializable()
 export class SpDomesticPaymentResponse extends SpDomesticPayment{
-    @JsonProperty('id')
+    @JsonProperty({name: 'id'})
     public Id: string;
-    @JsonProperty('reference')
+    @JsonProperty({name:'reference'})
     public Reference: string;
-    @JsonProperty('currency')
+    @JsonProperty({name: 'currency'})
     public Currency: string;
-    @JsonProperty('issuer')
+    @JsonProperty({name: 'issuer'})
     public Issuer: SpUserAccount;
-    @JsonProperty('issuerForm')
+    @JsonProperty({name: 'issuedFrom'})
     public IssuedFrom?: SpPaymentSource;
-    @JsonProperty('debtor')
+    @JsonProperty({name: 'debtor'})
     public Debtor: SpPaymentUserAccount;
-    @JsonProperty('link')
+    @JsonProperty({name: 'link'})
     public Link: string;
-    @JsonProperty('createdAt')
+    @JsonProperty({name: 'createdAt'})
     public CreatedAt: string;
     constructor() {
         super();

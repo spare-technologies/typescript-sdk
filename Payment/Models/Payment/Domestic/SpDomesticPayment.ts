@@ -1,12 +1,12 @@
-import { JsonProperty, Serializable, deserialize, serialize } from 'typescript-json-serializer';
+import {JsonProperty} from 'typescript-json-serializer';
 export class SpDomesticPayment {
-    @JsonProperty('amount')
+    @JsonProperty({name:'amount'})
     public Amount: number;
-    @JsonProperty('description')
+    @JsonProperty({name: 'description'})
     public Description: string;
-    @JsonProperty('successUrl')
+    @JsonProperty({name: 'successUrl'})
     public SuccessUrl: string;
-    @JsonProperty('failUrl')
+    @JsonProperty({name:'failUrl'})
     public FailUrl: string;
     constructor() {
     }
