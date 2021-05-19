@@ -1,0 +1,25 @@
+{
+  "name": "sdk-typescript",
+  "version": "1.0.56",
+  "description": "Sdk jscript version",
+  "main": "dist/index",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "dependencies": {
+    "@mdtalel/json-typescript-mapper2": "^1.1.4",
+    "@types/tough-cookie": "^4.0.0",
+    "axios": "^0.21.1",
+    "axios-cookiejar-support": "^1.0.1",
+    "ec-key-patch": "^0.0.4",
+    "tough-cookie": "^4.0.0",
+    "typescript-deserializer": "^1.0.2",
+    "typescript-json-serializer": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^15.3.0",
+    "i": "^0.3.6",
+    "npm": "^7.13.0"
+  }
+}
