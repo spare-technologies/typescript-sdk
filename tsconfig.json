@@ -1,0 +1,21 @@
+
+{
+  "compilerOptions": {
+    "target": "ES2015", 
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "allowJs": true,
+    "outDir": "./dist",
+    "strictPropertyInitialization": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "include": [
+      "src/**/*",
+      "index.d.ts",
+    ]
+  }
+}
