@@ -1,7 +1,7 @@
 import {SpDomesticPayment} from "./SpDomesticPayment";
 import {SpUserAccount} from "../Account/SpUserAccount";
 import {SpPaymentUserAccount} from "../Account/SpPaymentUserAccount";
-import {deserialize, JsonProperty, Serializable} from 'typescript-json-serializer';
+import {JsonProperty, Serializable} from 'typescript-json-serializer';
 
 import {SpPaymentSource} from "../../../Enum/Payment/SpPaymentSource";
 

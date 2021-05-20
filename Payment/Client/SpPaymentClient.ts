@@ -4,10 +4,10 @@ import {SpDomesticPaymentResponse} from "../Models/Payment/Domestic/SpDomesticPa
 import {SpPaymentClientOptions} from "./SpPaymentClientOptions";
 import {SpEndpoints} from "./SpEndpoints";
 import {deserialize, serialize} from 'typescript-json-serializer';
-
 import {SpareSdkResponse} from "../Models/Response/SpareSdkResponse";
 
 const axios = require('axios').default;
+const stringify = require('json-stable-stringify');
 
 export class SpPaymentClient implements ISpPaymentClient {
     private headers = {
@@ -20,8 +20,8 @@ export class SpPaymentClient implements ISpPaymentClient {
         return `${this._clientOptions.BaseUrl}${endpoint.Value}`
     }
 
-    private GetBody(o: object) {
-
+    private static GetBody(o: object) {
+        return serialize(o)
     }
 
     constructor(private _clientOptions: SpPaymentClientOptions) {
@@ -32,10 +32,10 @@ export class SpPaymentClient implements ISpPaymentClient {
             method: 'post',
             url: this.GetUrl(SpEndpoints.CreateDomesticPayment),
             headers: this.headers,
-            data: { payment }
+            data: SpPaymentClient.GetBody(payment)
         })
         const model = deserialize<SpareSdkResponse<SpDomesticPaymentResponse, object>>(response.data, SpareSdkResponse);
-        return serialize(model.Data);
+        return stringify(serialize(model));
     }
 
     async GetDomesticPayment(id: string) {
@@ -48,7 +48,7 @@ export class SpPaymentClient implements ISpPaymentClient {
             headers: this.headers
         })
         const model = deserialize<SpareSdkResponse<SpDomesticPaymentResponse, object>>(response.data, SpareSdkResponse);
-        return serialize(model.Data);
+        return stringify(serialize(model));
     }
 
     async ListDomesticPayments(start: number, perPage: number) {
@@ -62,6 +62,6 @@ export class SpPaymentClient implements ISpPaymentClient {
             headers: this.headers
         })
         const model = deserialize<SpareSdkResponse<SpDomesticPaymentResponse[], object>>(response.data, SpareSdkResponse);
-        return serialize(model.Data);
+        return stringify(serialize(model));
     }
 }
