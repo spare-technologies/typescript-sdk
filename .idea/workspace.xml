@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a597c04-819e-40e0-b132-e1952d7a9c21" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPayment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPayment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,7 @@
       <workItem from="1621544839213" duration="3241000" />
       <workItem from="1621551278209" duration="1587000" />
       <workItem from="1621587610189" duration="8795000" />
-      <workItem from="1621596434076" duration="6035000" />
+      <workItem from="1621596434076" duration="6455000" />
     </task>
     <servers />
   </component>
