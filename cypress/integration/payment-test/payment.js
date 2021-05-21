@@ -1,4 +1,4 @@
-const {env} = require("../../../env");
+const {env} = require("../../../env-key");
 const headers = {
     'app-id': env.appId,
     'x-api-key': env.apiKey,
