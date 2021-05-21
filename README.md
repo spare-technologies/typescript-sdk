@@ -26,21 +26,21 @@ const client = new sdk.SpPaymentClient(
 
 4 - Implement Domestic Payment api
 
-//Lst
+- List
 ```javascript
-client.ListDomesticPayments(0, 10)
+const payments = await client.ListDomesticPayments(0, 10)
 ```
 
-//Gist
+- Get
 ```javascript
-client.GetDomesticPayment('d214857b-d654-48a0-b039-42b46b0e2')
+const payment = await client.GetDomesticPayment('d214857b-d654-48a0-b039-42b46b0e2')
 ```
 
-//Create
+- Create
 ```javascript
- client.CreateDomesticPayment({
+const payment = await client.CreateDomesticPayment({
         Amount : 10,
-        Description : "Test domistic payment",
+        Description : "Test domestic payment",
         FailUrl : "https://furl.com",
         SuccessUrl : "https://surl.com"
 })
