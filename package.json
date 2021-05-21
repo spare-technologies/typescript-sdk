@@ -1,27 +1,27 @@
 {
   "name": "sdk-typescript",
-  "version": "1.0.76",
+  "version": "1.1.2",
   "description": "Sdk jscript version",
   "main": "dist/index",
   "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "npx cypress open"
+  },
   "files": [
     "/dist"
   ],
   "dependencies": {
-    "@mdtalel/json-typescript-mapper2": "^1.1.4",
     "@types/tough-cookie": "^4.0.0",
     "axios": "^0.21.1",
-    "axios-cookiejar-support": "^1.0.1",
     "ec-key-patch": "^0.0.4",
     "js-sha256": "^0.9.0",
     "json-stable-stringify": "^1.0.1",
-    "tough-cookie": "^4.0.0",
     "ts-serializer": "^2.2.6",
-    "typescript-deserializer": "^1.0.2",
     "typescript-json-serializer": "^3.3.0"
   },
   "devDependencies": {
     "@types/node": "^15.3.0",
+    "cypress": "^7.3.0",
     "i": "^0.3.6",
     "npm": "^7.13.0"
   }

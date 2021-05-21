@@ -3,11 +3,11 @@ import {SpDomesticPayment} from "../Models/Payment/Domestic/SpDomesticPayment";
 import {SpDomesticPaymentResponse} from "../Models/Payment/Domestic/SpDomesticPaymentResponse";
 import {SpPaymentClientOptions} from "./SpPaymentClientOptions";
 import {SpEndpoints} from "./SpEndpoints";
-import {deserialize, serialize} from 'typescript-json-serializer';
+import {deserialize} from 'typescript-json-serializer';
 import {SpareSdkResponse} from "../Models/Response/SpareSdkResponse";
+import "../../Helpers/Extensions/SerilizableExtension";
 
 const axios = require('axios').default;
-const stringify = require('json-stable-stringify');
 
 export class SpPaymentClient implements ISpPaymentClient {
     private headers = {
@@ -21,24 +21,33 @@ export class SpPaymentClient implements ISpPaymentClient {
     }
 
     private static GetBody(o: object) {
-        return serialize(o)
+        return o.toJson()
     }
 
     constructor(private _clientOptions: SpPaymentClientOptions) {
     }
 
-    async CreateDomesticPayment(payment: SpDomesticPayment) {
+    /***
+     * Create domestic payment
+     * @param payment
+     * @constructor
+     */
+    async CreateDomesticPayment(payment: SpDomesticPayment): Promise<SpareSdkResponse<SpDomesticPaymentResponse, object>> {
         const response = await axios({
             method: 'post',
             url: this.GetUrl(SpEndpoints.CreateDomesticPayment),
             headers: this.headers,
             data: SpPaymentClient.GetBody(payment)
         })
-        const model = deserialize<SpareSdkResponse<SpDomesticPaymentResponse, object>>(response.data, SpareSdkResponse);
-        return stringify(serialize(model));
+        return deserialize<SpareSdkResponse<SpDomesticPaymentResponse, object>>(response.data, SpareSdkResponse);
     }
 
-    async GetDomesticPayment(id: string) {
+    /***
+     * Get domestic payment
+     * @param id
+     * @constructor
+     */
+    async GetDomesticPayment(id: string): Promise<SpareSdkResponse<SpDomesticPaymentResponse, object>> {
         const response = await axios({
             method: 'get',
             url: this.GetUrl(SpEndpoints.GetDomesticPayment),
@@ -47,11 +56,16 @@ export class SpPaymentClient implements ISpPaymentClient {
             },
             headers: this.headers
         })
-        const model = deserialize<SpareSdkResponse<SpDomesticPaymentResponse, object>>(response.data, SpareSdkResponse);
-        return stringify(serialize(model));
+        return deserialize<SpareSdkResponse<SpDomesticPaymentResponse, object>>(response.data, SpareSdkResponse);
     }
 
-    async ListDomesticPayments(start: number, perPage: number) {
+    /***
+     * List domestic payment
+     * @param start
+     * @param perPage
+     * @constructor
+     */
+    async ListDomesticPayments(start: number, perPage: number): Promise<SpareSdkResponse<SpDomesticPaymentResponse[], object>> {
         const response = await axios({
             method: 'get',
             url: this.GetUrl(SpEndpoints.ListDomesticPayments),
@@ -61,7 +75,6 @@ export class SpPaymentClient implements ISpPaymentClient {
             },
             headers: this.headers
         })
-        const model = deserialize<SpareSdkResponse<SpDomesticPaymentResponse[], object>>(response.data, SpareSdkResponse);
-        return stringify(serialize(model));
+        return deserialize<SpareSdkResponse<SpDomesticPaymentResponse[], object>>(response.data, SpareSdkResponse);
     }
 }

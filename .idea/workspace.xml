@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4a597c04-819e-40e0-b132-e1952d7a9c21" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cypress/integration/payment-test/payment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Helpers/Security/DigitalSignature/EccSignatureManager.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helpers/Security/Crypto/SpCrypto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helpers/Security/Crypto/SpEcKeyPair.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Payment/Client/ISpPaymentClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Client/ISpPaymentClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Payment/Client/SpEndpoints.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Client/SpEndpoints.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Payment/Client/SpPaymentClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Client/SpPaymentClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Payment/Client/SpPaymentClientOptions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Client/SpPaymentClientOptions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Payment/Enum/Payment/SpPaymentSource.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Enum/Payment/SpPaymentSource.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Payment/Models/Payment/Account/SpPaymentUserAccount.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpPaymentUserAccount.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Payment/Models/Payment/Account/SpUserAccount.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpUserAccount.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Payment/Models/Payment/Account/SpUserPaymentBankAccount.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpUserPaymentBankAccount.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Payment/Models/Payment/Domestic/SpDomesticPayment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPayment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Payment/Models/Payment/Domestic/SpDomesticPaymentResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPaymentResponse.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Payment/Models/Response/SpareSdkResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Response/SpareSdkResponse.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Payment/SpDomesticPaymentClientExtension.ts" beforeDir="false" afterPath="$PROJECT_DIR$/env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1sngM11ApBFHwY6cUdO44sM2EY1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sdk-ts/typescript-sdk" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4a597c04-819e-40e0-b132-e1952d7a9c21" name="Default Changelist" comment="" />
+      <created>1621513715981</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621513715981</updated>
+      <workItem from="1621513719510" duration="13041000" />
+      <workItem from="1621531664420" duration="796000" />
+      <workItem from="1621544839213" duration="3241000" />
+      <workItem from="1621551278209" duration="1587000" />
+      <workItem from="1621587610189" duration="8795000" />
+      <workItem from="1621596434076" duration="4632000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
