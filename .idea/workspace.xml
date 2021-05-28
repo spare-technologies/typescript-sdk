@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a597c04-819e-40e0-b132-e1952d7a9c21" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/payment-test/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/payment-test/payment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPayment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPayment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +31,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sdk-ts/typescript-sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spare-version/spare-dashboard" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -55,7 +54,9 @@
       <workItem from="1621544839213" duration="3241000" />
       <workItem from="1621551278209" duration="1587000" />
       <workItem from="1621587610189" duration="8795000" />
-      <workItem from="1621596434076" duration="7410000" />
+      <workItem from="1621596434076" duration="12789000" />
+      <workItem from="1621847686394" duration="5814000" />
+      <workItem from="1621932174762" duration="52000" />
     </task>
     <servers />
   </component>

@@ -9,5 +9,6 @@ export class SpDomesticPayment {
     @JsonProperty({name:'failUrl'})
     public FailUrl: string;
     constructor() {
+
     }
 }

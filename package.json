@@ -1,11 +1,11 @@
 {
   "name": "sdk-typescript",
-  "version": "1.1.4",
+  "version": "1.1.9",
   "description": "Sdk jscript version",
   "main": "dist/index",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "npx cypress open"
+    "test": "npx cypress run"
   },
   "files": [
     "/dist"
