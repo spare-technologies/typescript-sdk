@@ -31,7 +31,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spare-version/spare-dashboard" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/test-sdk" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -57,6 +57,18 @@
       <workItem from="1621596434076" duration="12789000" />
       <workItem from="1621847686394" duration="5814000" />
       <workItem from="1621932174762" duration="52000" />
+      <workItem from="1623085602988" duration="606000" />
+      <workItem from="1623145311672" duration="4950000" />
+      <workItem from="1623662384612" duration="4556000" />
+      <workItem from="1623747286098" duration="611000" />
+      <workItem from="1623833618454" duration="630000" />
+      <workItem from="1623924985521" duration="608000" />
+      <workItem from="1624270105735" duration="619000" />
+      <workItem from="1624280936985" duration="599000" />
+      <workItem from="1624356155042" duration="599000" />
+      <workItem from="1624463832517" duration="599000" />
+      <workItem from="1624526945168" duration="35000" />
+      <workItem from="1625242177944" duration="655000" />
     </task>
     <servers />
   </component>
