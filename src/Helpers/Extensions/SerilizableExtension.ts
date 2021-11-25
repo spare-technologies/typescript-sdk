@@ -1,5 +1,6 @@
 import {serialize} from "typescript-json-serializer";
 import * as hash from "js-sha256";
+const stringify = require('json-stable-stringify');
 
 export {}
 declare global {
@@ -8,6 +9,11 @@ declare global {
      * Get json object
      */
     toJson(): object;
+
+    /***
+     * Get stable json
+     */
+    toStableJson(): string;
 
     /**
      * Get json string
@@ -45,6 +51,13 @@ declare global {
  */
 Object.prototype.toJson = function (this: object) {
   return serialize(this, true)
+};
+
+
+Object.prototype.toStableJson = function (this: object) {
+  const ser = serialize(this, true);
+  const json = removeNullProperties(ser);
+  return stringify(json);
 };
 
 /**
@@ -94,4 +107,37 @@ Object.prototype.getCleanJson = function (jsonObject: any, pretty: boolean) {
   }
   return pretty ? JSON.stringify(clone, Object.keys(clone).sort(), '\t') : JSON.stringify(clone, Object.keys(clone).sort());
 };
+
+function removeNullProperties(obj: any) {
+  Object.keys(obj).forEach(key => {
+    let value = obj[key];
+    let hasProperties = value && Object.keys(value).length > 0;
+    if (value === null) {
+      delete obj[key];
+    }
+    if (Array.isArray(value)) {
+      obj[key] = value.filter(function (el: any) {
+        removeNullProperties(value);
+        return el !=null;
+      });
+      stringify(obj[key]);
+    }
+    else if ((typeof value !== "string") && hasProperties) {
+      removeNullProperties(value);
+    }
+  });
+  toString(obj);
+  return obj;
+}
+
+function toString(o: any) {
+  Object.keys(o).forEach(k => {
+    if (typeof o[k] === 'object') {
+      return toString(o[k]);
+    }
+    o[k] = '' + o[k];
+  });
+
+  return o;
+}
 

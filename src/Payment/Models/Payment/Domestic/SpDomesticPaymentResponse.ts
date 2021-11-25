@@ -23,7 +23,7 @@ export class SpDomesticPaymentResponse extends SpDomesticPayment{
     public Link: string;
     @JsonProperty({name: 'createdAt'})
     public CreatedAt: string;
-    constructor() {
-        super();
+    constructor(amount: number, description: string) {
+        super(amount, description);
     }
 }

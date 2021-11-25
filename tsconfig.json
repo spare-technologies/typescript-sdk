@@ -12,10 +12,6 @@
     "outDir": "./dist",
     "strictPropertyInitialization": false,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "include": [
-      "src/**/*",
-      "index.d.ts",
-    ]
+    "experimentalDecorators": true
   }
 }

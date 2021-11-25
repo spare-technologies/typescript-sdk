@@ -1,6 +1,7 @@
 import {SpDomesticPayment} from "../Models/Payment/Domestic/SpDomesticPayment";
 import {SpDomesticPaymentResponse} from "../Models/Payment/Domestic/SpDomesticPaymentResponse";
 import {SpareSdkResponse} from "../Models/Response/SpareSdkResponse";
+import {SpCreateDomesticPaymentResponse} from "../Models/Payment/Domestic/CreateDomesticPaymentResponse";
 
 export interface ISpPaymentClient {
 
@@ -9,7 +10,7 @@ export interface ISpPaymentClient {
      * @param payment
      * @constructor
      */
-    CreateDomesticPayment(payment: SpDomesticPayment): Promise<SpareSdkResponse<SpDomesticPaymentResponse, object>>;
+    CreateDomesticPayment(payment: SpDomesticPayment, signature: string): Promise<SpCreateDomesticPaymentResponse>;
 
     /***
      * Get domestic payment

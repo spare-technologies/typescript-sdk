@@ -6,6 +6,7 @@ import {SpEndpoints} from "./SpEndpoints";
 import {deserialize} from 'typescript-json-serializer';
 import {SpareSdkResponse} from "../Models/Response/SpareSdkResponse";
 import "../../Helpers/Extensions/SerilizableExtension";
+import {SpCreateDomesticPaymentResponse} from "../Models/Payment/Domestic/CreateDomesticPaymentResponse";
 
 const axios = require('axios').default;
 
@@ -32,14 +33,24 @@ export class SpPaymentClient implements ISpPaymentClient {
      * @param payment
      * @constructor
      */
-    async CreateDomesticPayment(payment: SpDomesticPayment): Promise<SpareSdkResponse<SpDomesticPaymentResponse, object>> {
+    async CreateDomesticPayment(payment: SpDomesticPayment, signature: string): Promise<SpCreateDomesticPaymentResponse> {
+        const Headers = {
+            'app-id': `${this._clientOptions.AppId}`,
+            'x-api-key': `${this._clientOptions.ApiKey}`,
+            'Content-Type': 'application/json',
+            'x-signature': signature
+        }
         const response = await axios({
             method: 'post',
             url: this.GetUrl(SpEndpoints.CreateDomesticPayment),
-            headers: this.headers,
+            headers: Headers,
             data: SpPaymentClient.GetBody(payment)
         })
-        return deserialize<SpareSdkResponse<SpDomesticPaymentResponse, object>>(response.data, SpareSdkResponse);
+        const responseModel = deserialize<SpareSdkResponse<SpDomesticPaymentResponse, object>>(response.data, SpareSdkResponse);
+        return new SpCreateDomesticPaymentResponse(
+            responseModel.Data,
+            response.headers['x-signature']
+       )
     }
 
     /***

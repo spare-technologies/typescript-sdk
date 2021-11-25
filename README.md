@@ -26,22 +26,41 @@ const client = new sdk.SpPaymentClient(
 
 4 - Implement Domestic Payment api
 
-- List
+- List Payments
 ```javascript
 const payments = await client.ListDomesticPayments(0, 10)
 ```
 
-- Get
+- Get Payment
 ```javascript
 const payment = await client.GetDomesticPayment('d214857b-d654-48a0-b039-42b46b0e2')
 ```
 
-- Create
+- Create Payment
+
+ // Initialize keys
 ```javascript
-const payment = await client.CreateDomesticPayment({
-        Amount : 10,
-        Description : "Test domestic payment",
-        FailUrl : "https://furl.com",
-        SuccessUrl : "https://surl.com"
-})
+const PrivateKey = 'Your ecc private key';
+const ServerPublicKey = 'Server ecc public key'
+```
+
+ // Initialize payment
+```javascript
+const payment = new sdk.SpDomesticPayment(10, 'test payment')
+```
+
+ // Sign the payment
+```javascript
+const signature = sdk.EccSignatureManager.sign(PrivateKey, payment)
+```
+ // Create payment
+```javascript
+const createdPayment = await client.CreateDomesticPayment(payment, signature)
+```
+
+ // To verify signature of the created payment
+```javascript
+if (sdk.EccSignatureManager.verify(ServerPublicKey, createdPayment.Payment, createdPayment.Signature)) {
+    // Signature verified
+}
 ```
