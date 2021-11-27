@@ -4,3 +4,4 @@ export {SpDomesticPayment} from './src/Payment/Models/Payment/Domestic/SpDomesti
 export {SpCrypto} from './src/Helpers/Security/Crypto/SpCrypto';
 export {SpEcKeyPair} from './src/Helpers/Security/Crypto/SpEcKeyPair';
 export {SpEccSignatureManager} from "./src/Helpers/Security/DigitalSignature/SpEccSignatureManager";
+export * as ObjectExtension from "./src/Helpers/Extensions/SerilizableExtension";
