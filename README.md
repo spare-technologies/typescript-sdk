@@ -46,7 +46,7 @@ const signature = sdk.EccSignatureManager.sign(PrivateKey, payment)
 const createdPayment = await client.CreateDomesticPayment(payment, signature)
 
 // To verify signature of the created payment
-if (sdk.EccSignatureManager.verify(ServerPublicKey, createdPayment.Payment, createdPayment.Signature)) {
+if (sdk.EccSignatureManager.verify(ServerPublicKey, createdPayment.payment, createdPayment.signature)) {
     // Signature verified
 }
 ```

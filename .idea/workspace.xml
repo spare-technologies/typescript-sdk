@@ -2,30 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a597c04-819e-40e0-b132-e1952d7a9c21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cypress/integration/Security/Crypto/spCrypto_test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/Security/DigitalSignature/EccSignatureManager_test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/Serialization/serializationTest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/payment-test/payment_integration_test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress.json" beforeDir="false" afterPath="$PROJECT_DIR$/cypress.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/fixtures/example.json" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/fixtures/example.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/payment-test/payment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/plugins/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/plugins/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/videos/payment-test/payment.js.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helpers/Security/DigitalSignature/EccSignatureManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/Security/DigitalSignature/SpEccSignatureManager.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Client/SpPaymentClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Client/SpPaymentClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpPaymentUserAccount.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpPaymentUserAccount.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpUserAccount.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpUserAccount.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpUserPaymentBankAccount.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpUserPaymentBankAccount.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/CreateDomesticPaymentResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/CreateDomesticPaymentResponse.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPayment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPayment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPaymentResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPaymentResponse.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Response/SpareSdkResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Response/SpareSdkResponse.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +101,7 @@
       <workItem from="1637829874002" duration="20513000" />
       <workItem from="1637964574281" duration="13827000" />
       <workItem from="1637978420685" duration="2146000" />
-      <workItem from="1638011373784" duration="4102000" />
+      <workItem from="1638011373784" duration="4287000" />
     </task>
     <servers />
   </component>
