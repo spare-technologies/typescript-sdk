@@ -11,7 +11,7 @@ npm install <package_name>
 #### II- To Generate ECC key pair
 
 ```javascript
-import * as sdk from '<package_name>'
+import * as sdk from '@spare-technologies/spare-typescript-sdk'
 
 const keys = sdk.SpCrypto.GenerateKeyPair();
 
@@ -23,7 +23,7 @@ console.log("Public key \n" + keys.publicKey);
 #### III- To create your first payment request
 
 ```javascript
-import * as sdk from '<package_name>'
+import * as sdk from '@spare-technologies/spare-typescript-sdk'
 
 const PrivateKey = 'Your ecc private key';
 const ServerPublicKey = 'Spare ecc public key'

@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a597c04-819e-40e0-b132-e1952d7a9c21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.spec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +102,7 @@
       <workItem from="1637829874002" duration="20513000" />
       <workItem from="1637964574281" duration="13827000" />
       <workItem from="1637978420685" duration="2146000" />
-      <workItem from="1638011373784" duration="8421000" />
+      <workItem from="1638011373784" duration="9448000" />
     </task>
     <servers />
   </component>

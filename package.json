@@ -1,5 +1,5 @@
 {
-  "name": "spare-typescript-sdk",
+  "name": "@spare-technologies/spare-typescript-sdk",
   "version": "1.0.0",
   "description": "Spare type script sdk",
   "author": {
@@ -16,6 +16,9 @@
   "files": [
     "/dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@types/tough-cookie": "^4.0.0",
     "axios": "^0.21.1",
