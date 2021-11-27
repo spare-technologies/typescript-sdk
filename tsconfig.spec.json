@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./distTests",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "types": [
+      "jasmine",
+      "node",
+      "cypress"
+    ]
+  },
+  "include": [
+    "**/*.spec.ts",
+    "node_modules",
+    "cypress",
+    "dist"
+  ]
+}
