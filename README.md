@@ -2,64 +2,50 @@
 
 ### Usage
 
-1- Download npm package
+#### I- Download npm package
 
+```bash
 npm install <package_name>
+```
 
-2- Import package to the desire component
+#### II- To Generate ECC key pair
 
 ```javascript
 import * as sdk from '<package_name>'
+
+const keys = sdk.SpCrypto.GenerateKeyPair();
+
+console.log("Private key \n" + keys.privateKey);
+console.log("Public key \n" + keys.publicKey);
+
 ```
 
-3- Create a client instance from SpPaymentClient class
+#### III- To create your first payment request
 
 ```javascript
+import * as sdk from '<package_name>'
+
+const PrivateKey = 'Your ecc private key';
+const ServerPublicKey = 'Spare ecc public key'
+
+// Configure client
 const client = new sdk.SpPaymentClient(
     {
             ApiKey : "Your api key",
             AppId : "Your app id",
             BaseUrl : "https://payment.tryspare.com"
-    }
-)
-```
+    });
 
-4 - Implement Domestic Payment api
+// Initialize payment
+const payment = new sdk.SpDomesticPayment(10, 'Payment from Spare sdk');
 
-- List Payments
-```javascript
-const payments = await client.ListDomesticPayments(0, 10)
-```
-
-- Get Payment
-```javascript
-const payment = await client.GetDomesticPayment('d214857b-d654-48a0-b039-42b46b0e2')
-```
-
-- Create Payment
-
- // Initialize keys
-```javascript
-const PrivateKey = 'Your ecc private key';
-const ServerPublicKey = 'Server ecc public key'
-```
-
- // Initialize payment
-```javascript
-const payment = new sdk.SpDomesticPayment(10, 'test payment')
-```
-
- // Sign the payment
-```javascript
+// Sign the payment
 const signature = sdk.EccSignatureManager.sign(PrivateKey, payment)
-```
- // Create payment
-```javascript
-const createdPayment = await client.CreateDomesticPayment(payment, signature)
-```
 
- // To verify signature of the created payment
-```javascript
+// Create payment
+const createdPayment = await client.CreateDomesticPayment(payment, signature)
+
+// To verify signature of the created payment
 if (sdk.EccSignatureManager.verify(ServerPublicKey, createdPayment.Payment, createdPayment.Signature)) {
     // Signature verified
 }

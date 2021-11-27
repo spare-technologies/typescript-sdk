@@ -5,9 +5,9 @@ import {JsonProperty, Serializable} from "typescript-json-serializer";
 @Serializable()
 export class SpPaymentUserAccount {
     @JsonProperty({name: 'account'})
-    public Account: SpUserAccount;
+    public account: SpUserAccount | null;
     @JsonProperty({name: 'bankAccount'})
-    public BankAccount: SpUserPaymentBankAccount;
+    public bankAccount: SpUserPaymentBankAccount | null;
     constructor() {
     }
 }

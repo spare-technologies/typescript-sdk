@@ -1,17 +1,15 @@
-import {SpareSdkResponse} from "../../Response/SpareSdkResponse";
 import {SpDomesticPaymentResponse} from "./SpDomesticPaymentResponse";
 import {JsonProperty, Serializable} from "typescript-json-serializer";
 
 @Serializable()
 export class SpCreateDomesticPaymentResponse {
+    @JsonProperty({name: 'payment'})
+    public payment: SpDomesticPaymentResponse | null;
+    @JsonProperty({name: 'signature'})
+    public signature: string | null;
 
-    @JsonProperty({name: 'PaymentSuccess'})
-    public Payment: SpDomesticPaymentResponse;
-    @JsonProperty({name: 'Signature'})
-    public Signature: string;
-
-    constructor(paymentSuccess: SpDomesticPaymentResponse, signature: string) {
-        this.Payment = paymentSuccess;
-        this.Signature = signature;
+    constructor(payment: SpDomesticPaymentResponse | null, signature: string | null) {
+        this.payment = payment;
+        this.signature = signature;
     }
 }

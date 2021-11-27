@@ -1,7 +1,12 @@
 {
-  "name": "sdk-typescript",
+  "name": "spare-typescript-sdk",
   "version": "1.2.42",
-  "description": "Sdk jscript version",
+  "description": "Spare type script sdk",
+  "author": {
+    "email": "dev@tryspare.com",
+    "name": "Yassine Ben Taher"
+  },
+  "homepage": "https://docs.tryspare.com",
   "main": "dist/index",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -18,6 +23,7 @@
     "js-sha256": "^0.9.0",
     "json-stable-stringify": "^1.0.1",
     "ts-serializer": "^2.2.6",
+    "typescript": "^4.5.2",
     "typescript-json-serializer": "^3.4.4"
   },
   "devDependencies": {

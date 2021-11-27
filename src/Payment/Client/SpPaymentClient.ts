@@ -3,10 +3,10 @@ import {SpDomesticPayment} from "../Models/Payment/Domestic/SpDomesticPayment";
 import {SpDomesticPaymentResponse} from "../Models/Payment/Domestic/SpDomesticPaymentResponse";
 import {SpPaymentClientOptions} from "./SpPaymentClientOptions";
 import {SpEndpoints} from "./SpEndpoints";
-import {deserialize} from 'typescript-json-serializer';
 import {SpareSdkResponse} from "../Models/Response/SpareSdkResponse";
 import "../../Helpers/Extensions/SerilizableExtension";
 import {SpCreateDomesticPaymentResponse} from "../Models/Payment/Domestic/CreateDomesticPaymentResponse";
+import {deserialize} from "typescript-json-serializer";
 
 const axios = require('axios').default;
 
@@ -31,6 +31,7 @@ export class SpPaymentClient implements ISpPaymentClient {
     /***
      * Create domestic payment
      * @param payment
+     * @param signature
      * @constructor
      */
     async CreateDomesticPayment(payment: SpDomesticPayment, signature: string): Promise<SpCreateDomesticPaymentResponse> {
@@ -48,9 +49,9 @@ export class SpPaymentClient implements ISpPaymentClient {
         })
         const responseModel = deserialize<SpareSdkResponse<SpDomesticPaymentResponse, object>>(response.data, SpareSdkResponse);
         return new SpCreateDomesticPaymentResponse(
-            responseModel.Data,
+            responseModel.data ,
             response.headers['x-signature']
-       )
+        )
     }
 
     /***

@@ -1,6 +1,6 @@
 const ECKey = require ('ec-key-patch');
 
-export class EccSignatureManager {
+export class SpEccSignatureManager {
     /***
      * Sign message
      * @param privateKey

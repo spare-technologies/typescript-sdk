@@ -3,13 +3,13 @@ import {JsonProperty, Serializable} from "typescript-json-serializer";
 @Serializable()
 export class SpUserAccount {
     @JsonProperty({name: 'id'})
-    public Id: string;
+    public id: string | null;
     @JsonProperty({name: 'identifier'})
-    public Identifier: string;
+    public identifier: string | null;
     @JsonProperty({name: 'name'})
-    public Name: string;
+    public name: string | null;
     @JsonProperty({name: 'picture'})
-    public Picture: string;
+    public picture: string | null;
     constructor() {
     }
 }

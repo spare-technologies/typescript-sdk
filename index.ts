@@ -3,4 +3,4 @@ export {SpPaymentClientOptions} from './src/Payment/Client/SpPaymentClientOption
 export {SpDomesticPayment} from './src/Payment/Models/Payment/Domestic/SpDomesticPayment';
 export {SpCrypto} from './src/Helpers/Security/Crypto/SpCrypto';
 export {SpEcKeyPair} from './src/Helpers/Security/Crypto/SpEcKeyPair';
-export {EccSignatureManager} from "./src/Helpers/Security/DigitalSignature/EccSignatureManager";
+export {SpEccSignatureManager} from "./src/Helpers/Security/DigitalSignature/SpEccSignatureManager";

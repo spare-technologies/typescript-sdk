@@ -3,12 +3,12 @@ import {JsonProperty, Serializable} from 'typescript-json-serializer';
 @Serializable()
 export class SpDomesticPayment {
     @JsonProperty({name: 'amount'})
-    public Amount: number;
+    public amount: number | null;
     @JsonProperty({name: 'description'})
-    public Description: string;
+    public description: string | null;
 
-    constructor(amount: number, description: string) {
-        this.Amount = amount;
-        this.Description = description;
+    constructor(amount: number | null, description: string | null) {
+        this.amount = amount;
+        this.description = description;
     }
 }

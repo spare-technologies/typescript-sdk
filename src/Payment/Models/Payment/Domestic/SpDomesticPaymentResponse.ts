@@ -6,24 +6,24 @@ import {JsonProperty, Serializable} from 'typescript-json-serializer';
 import {SpPaymentSource} from "../../../Enum/Payment/SpPaymentSource";
 
 @Serializable()
-export class SpDomesticPaymentResponse extends SpDomesticPayment{
+export class SpDomesticPaymentResponse extends SpDomesticPayment {
     @JsonProperty({name: 'id'})
-    public Id: string;
+    public id: string | null;
     @JsonProperty({name:'reference'})
-    public Reference: string;
+    public reference: string | null;
     @JsonProperty({name: 'currency'})
-    public Currency: string;
+    public currency: string | null;
     @JsonProperty({name: 'issuer'})
-    public Issuer: SpUserAccount;
+    public issuer: SpUserAccount | null;
     @JsonProperty({name: 'issuedFrom'})
-    public IssuedFrom?: SpPaymentSource;
+    public issuedFrom?: SpPaymentSource | null;
     @JsonProperty({name: 'debtor'})
-    public Debtor: SpPaymentUserAccount;
+    public debtor: SpPaymentUserAccount | null;
     @JsonProperty({name: 'link'})
-    public Link: string;
+    public link: string | null;
     @JsonProperty({name: 'createdAt'})
-    public CreatedAt: string;
-    constructor(amount: number, description: string) {
+    public createdAt: string | null;
+    constructor(amount: number | null, description: string | null) {
         super(amount, description);
     }
 }
