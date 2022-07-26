@@ -1,13 +1,12 @@
 import {SpUserAccount} from "./SpUserAccount";
 import {SpUserPaymentBankAccount} from "./SpUserPaymentBankAccount";
-import {JsonProperty, Serializable} from "typescript-json-serializer";
+import {JsonProperty, JsonObject} from "typescript-json-serializer";
 
-@Serializable()
+@JsonObject()
 export class SpPaymentUserAccount {
     @JsonProperty({name: 'account'})
-    public account: SpUserAccount | null;
+    public account?: SpUserAccount | null;
+
     @JsonProperty({name: 'bankAccount'})
-    public bankAccount: SpUserPaymentBankAccount | null;
-    constructor() {
-    }
+    public bankAccount?: SpUserPaymentBankAccount | null;
 }

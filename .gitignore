@@ -84,7 +84,10 @@ typings/
 # Nuxt.js build / generate output
 .nuxt
 dist
-distTest
+distTests
+testEnvironment.json
+
+*.xml
 
 # Gatsby files
 .cache/

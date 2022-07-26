@@ -1,7 +1,14 @@
 export {SpPaymentClient} from './src/Payment/Client/SpPaymentClient';
 export {SpPaymentClientOptions} from './src/Payment/Client/SpPaymentClientOptions';
-export {SpDomesticPayment} from './src/Payment/Models/Payment/Domestic/SpDomesticPayment';
 export {SpCrypto} from './src/Helpers/Security/Crypto/SpCrypto';
 export {SpEcKeyPair} from './src/Helpers/Security/Crypto/SpEcKeyPair';
 export {SpEccSignatureManager} from "./src/Helpers/Security/DigitalSignature/SpEccSignatureManager";
 export * as ObjectExtension from "./src/Helpers/Extensions/SerilizableExtension";
+export {SpDomesticPaymentResponse} from "./src/Payment/Models/Payment/Domestic/SpDomesticPaymentResponse";
+export {SpCreateDomesticPaymentResponse} from "./src/Payment/Models/Payment/Domestic/SpCreateDomesticPaymentResponse";
+export {SpDomesticPayment} from './src/Payment/Models/Payment/Domestic/SpDomesticPayment';
+export {SpPaymentUserAccount} from './src/Payment/Models/Payment/Account/SpPaymentUserAccount';
+export {SpUserAccount} from './src/Payment/Models/Payment/Account/SpUserAccount';
+export {SpUserPaymentBankAccount} from './src/Payment/Models/Payment/Account/SpUserPaymentBankAccount';
+export {SpareSdkResponse} from './src/Payment/Models/Response/SpareSdkResponse';
+export {SpPaymentSource} from './src/Payment/Enum/Payment/SpPaymentSource';

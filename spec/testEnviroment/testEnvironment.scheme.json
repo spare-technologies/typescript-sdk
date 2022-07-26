@@ -1,0 +1,17 @@
+{
+  "debugMode": false,
+  "baseUrl": "",
+  "ecKeypair": {
+    "private": "",
+    "public": ""
+  },
+  "serverPublicKey": "",
+  "apiKey": "",
+  "appId": "",
+  "proxy": {
+    "host": "",
+    "port": "",
+    "username": "",
+    "password": ""
+  }
+}

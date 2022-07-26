@@ -1,15 +1,11 @@
-import {JsonProperty, Serializable} from "typescript-json-serializer";
+import {JsonProperty, JsonObject} from "typescript-json-serializer";
+import {SpAccount} from "./SpAccount";
 
-@Serializable()
-export class SpUserAccount {
-    @JsonProperty({name: 'id'})
-    public id: string | null;
-    @JsonProperty({name: 'identifier'})
-    public identifier: string | null;
-    @JsonProperty({name: 'name'})
-    public name: string | null;
-    @JsonProperty({name: 'picture'})
-    public picture: string | null;
-    constructor() {
-    }
+@JsonObject()
+export class SpUserAccount extends SpAccount {
+    @JsonProperty({name: 'customerReferenceId'})
+    public customerReferenceId?: string | null
+
+    @JsonProperty({name: 'customerPaymentLink'})
+    public customerPaymentLink?: string | null
 }

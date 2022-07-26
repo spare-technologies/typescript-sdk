@@ -1,14 +1,13 @@
-import {JsonProperty, Serializable} from "typescript-json-serializer";
+import {JsonProperty, JsonObject} from "typescript-json-serializer";
 
-@Serializable()
+@JsonObject()
 export class SpareSdkResponse<T, TV> {
-    @JsonProperty('error')
+    @JsonProperty({name: 'error'})
     public error: string | null;
-    @JsonProperty('data')
-    public data: T | null;
-    @JsonProperty('meta')
-    public meta: TV | null;
 
-    constructor() {
-    }
+    @JsonProperty({name: 'data'})
+    public data: T | null;
+
+    @JsonProperty({name: 'meta'})
+    public meta: TV | null;
 }
