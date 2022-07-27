@@ -2,3 +2,5 @@
 !dist/**/*
 !README.md
 !LICENSE
+!package.json
+!package.lock.json

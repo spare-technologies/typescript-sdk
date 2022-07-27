@@ -1,0 +1,86 @@
+name: Test and Analyse
+on:
+  pull_request:
+    types: [ opened,reopened,edited ]
+    branches:
+      - dev
+jobs:
+  test_and_analyse:
+    name: Test and Analyse
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: [ 3.1.x ]
+        node-version: [14.x]
+    steps:
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.11
+
+      - name: Set up dotnet ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+
+      - uses: actions/checkout@v3
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          
+      - name: Install requirements
+        run: |
+          sudo apt update  &>/dev/null
+          sudo apt install -y wget jq zip npm &>/dev/null
+          sudo npm i -g npm &>/dev/null
+
+      - name: Install sonar scanner
+        run: |
+          wget -O sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.7.0.2747-linux.zip &>/dev/null
+          unzip sonar-scanner.zip &>/dev/null && rm sonar-scanner.zip && mv sonar-scanner-4.7.0.2747-linux/ sonar-scanner
+          sudo mv sonar-scanner /usr/bin
+
+      - name: Prepare test environment
+        env:
+          TEST_ENV: ${{ secrets.TEST_ENV }}
+        run: |
+          echo $TEST_ENV | base64 -d > spec/testEnvironment/testEnvironment.json
+
+      - name: Test and analyse
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        run: |
+          export PATH=$PATH:/usr/bin/sonar-scanner/bin
+          sudo echo "sonar.javascript.lcov.reportPaths=./coverage/lcov.info" >> /usr/bin/sonar-scanner/conf/sonar-scanner.properties
+          npm i --save && npm run cleanAndBuild
+          npm run test
+          sonar-scanner \
+          -Dsonar.projectKey=typescript-sdk \
+          -Dsonar.sources=. \
+          -Dsonar.host.url=$SONAR_HOST_URL \
+          -Dsonar.login=$SONAR_TOKEN
+
+      - name: Validate test
+        env:
+          SCRIPT_URL: ${{ secrets.SCRIPT_URL }}
+        run: |
+          wget $SCRIPT_URL 2>/dev/null && chmod 755 xml2json && sudo cp xml2json /usr/bin
+          mkdir -p testOutput/result
+          cp junit.xml testOutput/result/
+          cp -r coverage testOutput/
+          cp spec/test_check.sh testOutput/result/ && cd testOutput/result/ && chmod 755 test_check.sh
+          xml2json junit.xml && bash test_check.sh
+          cd ../.. && zip -r testOutput.zip testOutput &>/dev/null
+
+      - name: Save test outputs
+        uses: actions/upload-artifact@v2
+        with:
+          name: testOutput
+          path: testOutput.zip
+          retention-days: 30
