@@ -45,7 +45,7 @@ jobs:
           [ -d dist ] || exit 1 && npm pack 
           package_version=$(cat package.json | jq -r '.version')
           [ -f "spare-technologies-spare-typescript-sdk-$package_version.tgz" ] || exit 1
-          npm publish "spare-technologies-spare-typescript-sdk-$package_version.tgz" --access public
+          npm publish "spare-technologies-spare-typescript-sdk-$package_version.tgz" --access=public
           
           
 
