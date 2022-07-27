@@ -10,8 +10,8 @@
   "main": "dist/index",
   "types": "dist/index.d.ts",
   "scripts": {
-    "clean": "[ ! -d \"dist\" ] || rm -r dist && [ ! -d \"distTests\" ] || rm -r distTests",
-    "cleanAndBuild": "[ ! -d \"dist\" ] || rm -r dist && [ ! -d \"distTests\" ] || rm -r distTests && tsc -b",
+    "clean": "[ ! -d \"dist\" ] || rm -r dist && [ ! -d \"distTests\" ] || rm -r distTests && [ ! -f junit.xml ] || rm junit.xml && [ ! -d coverage ] || rm -r coverage",
+    "cleanAndBuild": "[ ! -d \"dist\" ] || rm -r dist && [ ! -d \"distTests\" ] || rm -r distTests && [ ! -f junit.xml ] || rm junit.xml && [ ! -d coverage ] || rm -r coverage && tsc -b",
     "build": "tsc -b",
     "test": "jest -i --coverage --passWithNoTests "
   },

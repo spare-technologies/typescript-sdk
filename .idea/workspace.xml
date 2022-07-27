@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a597c04-819e-40e0-b132-e1952d7a9c21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/jest.testSequencer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/payments/d_clientValidation.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/payments/e_payment.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/testEnvironment/Models/SpTestEnvironment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/testEnvironment/Models/SpTestKeypair.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/testEnvironment/Models/SpTestProxy.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/testEnvironment/testHelpers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Helpers/SpProxy.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/payments/payment.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/security/crypto/spCrypto.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/spec/security/crypto/b_spCrypto.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/security/digitalSignature/eccSignatureManager.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/spec/security/digitalSignature/c_eccSignatureManager.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/serialization/serialization.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/spec/serialization/a_serialization.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/testEnviroment/testEnvironment.scheme.json" beforeDir="false" afterPath="$PROJECT_DIR$/spec/testEnvironment/testEnvironment.scheme.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Client/SpPaymentClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Client/SpPaymentClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Client/SpPaymentClientOptions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Client/SpPaymentClientOptions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpPaymentUserAccount.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpPaymentUserAccount.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpCreateDomesticPaymentResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpCreateDomesticPaymentResponse.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPaymentRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPaymentRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPaymentResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPaymentResponse.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpPaymentDebtorInformation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpPaymentDebtorInformation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.app.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +181,7 @@
       <workItem from="1637964574281" duration="13827000" />
       <workItem from="1637978420685" duration="2146000" />
       <workItem from="1638011373784" duration="9448000" />
-      <workItem from="1658838012113" duration="40190000" />
+      <workItem from="1658838012113" duration="40653000" />
     </task>
     <servers />
   </component>
