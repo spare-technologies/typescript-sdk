@@ -16,13 +16,13 @@ export class SpDomesticPaymentResponse extends SpDomesticPayment {
     @JsonProperty({name: 'currency'})
     public currency?: string | null;
 
-    @JsonProperty({name: 'issuer'})
+    @JsonProperty({name: 'issuer', type: SpPaymentIssuer})
     public issuer?: SpPaymentIssuer | null;
 
     @JsonProperty({name: 'issuedFrom'})
     public issuedFrom?: SpPaymentSource | null;
 
-    @JsonProperty({name: 'debtor'})
+    @JsonProperty({name: 'debtor', type: SpPaymentUserAccount})
     public debtor?: SpPaymentUserAccount | null;
 
     @JsonProperty({name: 'link'})

@@ -13,4 +13,15 @@ export class SpPaymentDebtorInformation {
 
     @JsonProperty({name: 'customerReferenceId'})
     public customerReferenceId?: string | null;
+
+    constructor(
+        fullName: string | null,
+        email: string | null,
+        phone: string | null,
+        customerReferenceId: string | null) {
+        this.fullName = fullName
+        this.email = email
+        this.phone = phone
+        this.customerReferenceId = customerReferenceId
+    }
 }

@@ -4,7 +4,7 @@ import {JsonObject, JsonProperty} from "typescript-json-serializer";
 
 @JsonObject()
 export class SpDomesticPaymentRequest extends SpDomesticPayment {
-    @JsonProperty({name: 'customerInformation'})
+    @JsonProperty({name: 'customerInformation', type: SpPaymentDebtorInformation})
     public customerInformation?: SpPaymentDebtorInformation | null;
 
     constructor(amount: number,

@@ -4,8 +4,8 @@ import * as sdk from "../../dist"
 
 describe('Serialization test', function () {
     it('should serialize', function () {
-        let model = new sdk.SpareSdkResponse<sdk.SpDomesticPaymentResponse,object>();
-        model.data = new sdk.SpDomesticPaymentResponse(10,"serialize test")
+        let model = new sdk.SpareSdkResponse<sdk.SpDomesticPaymentResponse, object>();
+        model.data = new sdk.SpDomesticPaymentResponse(10, "serialize test")
         model.meta = {}
         expect(model.toStableJson()).not.toBeNull()
     });
@@ -19,8 +19,8 @@ describe('Serialization test', function () {
             }
         })
 
-        let json = {"data":{"amount":"10","description":"serialize test"},"meta":{}}
-        let object = serializer.deserialize<sdk.SpareSdkResponse<sdk.SpDomesticPaymentResponse,object>>(json, sdk.SpareSdkResponse) as sdk.SpareSdkResponse<sdk.SpDomesticPaymentResponse,object>;
+        let json = {"data": {"amount": "10", "description": "serialize test"}, "meta": {}}
+        let object = (serializer.deserialize<sdk.SpareSdkResponse<sdk.SpDomesticPaymentResponse, object>>(json, sdk.SpareSdkResponse)) as sdk.SpareSdkResponse<sdk.SpDomesticPaymentResponse, object>;
 
         expect(object).not.toBeUndefined()
         expect(object).not.toBeNull()
@@ -29,6 +29,15 @@ describe('Serialization test', function () {
         expect(object.data).not.toBeUndefined();
         expect(object.data).not.toBeNull();
         expect(object.data).not.toBe(null);
+    });
+
+    it('should remove nullable', function () {
+        let payment = new sdk.SpDomesticPayment(500);
+        payment.description = null;
+
+        let json = payment.toStableJson()
+
+        expect(json.includes("description")).toBe(false)
     });
 });
 

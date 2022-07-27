@@ -2,45 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a597c04-819e-40e0-b132-e1952d7a9c21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/payments/payment.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/security/crypto/spCrypto.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/security/digitalSignature/eccSignatureManager.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/serialization/serialization.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/testEnviroment/testEnvironment.scheme.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Payment/Errors/SpClientSdkError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpAccount.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpPaymentIssuer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPaymentRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpPaymentDebtorInformation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jest.testSequencer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/payments/d_clientValidation.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/payments/e_payment.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/testEnvironment/Models/SpTestEnvironment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/testEnvironment/Models/SpTestKeypair.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/testEnvironment/Models/SpTestProxy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/testEnvironment/testHelpers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Helpers/SpProxy.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/fixtures/example.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/Security/Crypto/spCrypto_test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/Security/DigitalSignature/EccSignatureManager_test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/Serialization/serializationTest.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/payment-test/payment_integration_test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/plugins/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/support/commands.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/support/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helpers/Extensions/SerilizableExtension.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/Extensions/SerilizableExtension.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Client/ISpPaymentClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Client/ISpPaymentClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/payments/payment.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/security/crypto/spCrypto.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/spec/security/crypto/b_spCrypto.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/security/digitalSignature/eccSignatureManager.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/spec/security/digitalSignature/c_eccSignatureManager.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/serialization/serialization.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/spec/serialization/a_serialization.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/testEnviroment/testEnvironment.scheme.json" beforeDir="false" afterPath="$PROJECT_DIR$/spec/testEnvironment/testEnvironment.scheme.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Payment/Client/SpPaymentClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Client/SpPaymentClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Payment/Client/SpPaymentClientOptions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Client/SpPaymentClientOptions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpPaymentUserAccount.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpPaymentUserAccount.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpUserAccount.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpUserAccount.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpUserPaymentBankAccount.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Account/SpUserPaymentBankAccount.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/CreateDomesticPaymentResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpCreateDomesticPaymentResponse.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPayment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPayment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpCreateDomesticPaymentResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpCreateDomesticPaymentResponse.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPaymentRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPaymentRequest.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPaymentResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpDomesticPaymentResponse.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Response/SpareSdkResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Response/SpareSdkResponse.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpPaymentDebtorInformation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment/Models/Payment/Domestic/SpPaymentDebtorInformation.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.spec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +65,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "js.last.introduce.type": "LET",
     "last_opened_file_path": "/home/blackhat/spare/typescript-sdk/spec/testEnviroment",
     "nodejs.jest.jest_package": "/home/blackhat/spare/typescript-sdk/node_modules/jest",
     "ts.external.directory.path": "/home/blackhat/spare/typescript-sdk/node_modules/typescript/lib"
@@ -95,22 +83,68 @@
       <recent name="$PROJECT_DIR$/cypress/integration/Security/Crypto" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Serialization test.should deserialize">
-    <configuration name="Serialization test.should deserialize" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.All Tests">
+    <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test Payment Api" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/spec/payments/d_payment.spec.ts" />
+      <test-names>
+        <test-name value="Test Payment Api" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Test Payment Api.should create payment with customer information" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/spec/serialization/serialization.spec.ts" />
+      <test-file value="$PROJECT_DIR$/spec/payments/d_payment.spec.ts" />
       <test-names>
-        <test-name value="Serialization test" />
-        <test-name value="should deserialize" />
+        <test-name value="Test Payment Api" />
+        <test-name value="should create payment with customer information" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="Test Payment Api.should initialize payment client" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/spec/payments/d_payment.spec.ts" />
+      <test-names>
+        <test-name value="Test Payment Api" />
+        <test-name value="should initialize payment client" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="d_payment.spec.ts" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/spec/payments/d_payment.spec.ts" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -121,13 +155,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Jest.Serialization test.should deserialize" />
+      <item itemvalue="Jest.All Tests" />
+      <item itemvalue="Jest.Test Payment Api" />
+      <item itemvalue="Jest.Test Payment Api.should create payment with customer information" />
+      <item itemvalue="Jest.Test Payment Api.should initialize payment client" />
+      <item itemvalue="Jest.d_payment.spec.ts" />
       <item itemvalue="npm.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.Serialization test.should deserialize" />
-        <item itemvalue="npm.test" />
+        <item itemvalue="Jest.Test Payment Api.should create payment with customer information" />
+        <item itemvalue="Jest.Test Payment Api" />
+        <item itemvalue="Jest.d_payment.spec.ts" />
+        <item itemvalue="Jest.Test Payment Api.should initialize payment client" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +205,7 @@
       <workItem from="1637964574281" duration="13827000" />
       <workItem from="1637978420685" duration="2146000" />
       <workItem from="1638011373784" duration="9448000" />
-      <workItem from="1658838012113" duration="16283000" />
+      <workItem from="1658838012113" duration="40190000" />
     </task>
     <servers />
   </component>

@@ -3,7 +3,7 @@ import {JsonProperty, JsonObject} from "typescript-json-serializer";
 
 @JsonObject()
 export class SpCreateDomesticPaymentResponse {
-    @JsonProperty({name: 'payment'})
+    @JsonProperty({name: 'payment', type: SpDomesticPaymentResponse})
     public payment?: SpDomesticPaymentResponse | null;
 
     @JsonProperty({name: 'signature'})

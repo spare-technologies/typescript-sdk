@@ -10,8 +10,11 @@
     "baseUrl": "."
   },
   "exclude": [
+    "spec",
     "**/*.spec.ts",
     "node_modules",
-    "dist"
+    "dist",
+    "jest.testSequencer.js",
+    "jest.config.js"
   ]
 }

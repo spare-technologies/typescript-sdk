@@ -4,14 +4,16 @@
   "description": "Spare type script sdk",
   "author": {
     "email": "dev@tryspare.com",
-    "name": "Yassine Ben Taher"
+    "name": "Hasni Mehdi"
   },
   "homepage": "https://docs.tryspare.com",
   "main": "dist/index",
   "types": "dist/index.d.ts",
   "scripts": {
+    "clean": "[ ! -d \"dist\" ] || rm -r dist && [ ! -d \"distTests\" ] || rm -r distTests",
+    "cleanAndBuild": "[ ! -d \"dist\" ] || rm -r dist && [ ! -d \"distTests\" ] || rm -r distTests && tsc -b",
     "build": "tsc -b",
-    "test": "jest --passWithNoTests"
+    "test": "jest -i --coverage --passWithNoTests "
   },
   "files": [
     "/dist"
@@ -36,6 +38,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^7.3.0",
+    "@jest/test-sequencer": "^28.1.3",
     "@types/jest": "^28.1.6",
     "@types/node": "^18.6.1",
     "jest": "^28.1.3",
