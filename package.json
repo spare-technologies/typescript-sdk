@@ -6,6 +6,16 @@
     "email": "dev@tryspare.com",
     "name": "Hasni Mehdi"
   },
+  "keywords": [
+    "payment",
+    "payment-sdk",
+    "fintech",
+    "fintech-api",
+    "openbanking",
+    "payment-gateway",
+    "webpaymentapi"
+  ],
+  "license": "MIT",
   "homepage": "https://docs.tryspare.com",
   "main": "dist/index",
   "types": "dist/index.d.ts",
@@ -19,6 +29,7 @@
     "/dist"
   ],
   "publishConfig": {
+    "registry": "",
     "access": "public"
   },
   "moduleDirectories": [
