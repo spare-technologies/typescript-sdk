@@ -61,5 +61,3 @@ X
 jest.config.js,8/8/881d5d47bdc17ef8facebef59b68b5fc099a0293
 V
 &src/Payment/Client/ISpPaymentClient.ts,0/3/03e8cffe8fcbcf07b67e9302f40385234f7867bc
-O
-spec/payments/e_payment.spec.ts,4/f/4f46e2ed90da2e0bcfbd39f7815c80dba1e2e6b4

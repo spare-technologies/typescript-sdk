@@ -1,11 +1,13 @@
 # typescript-sdk
-
+![npm](https://img.shields.io/npm/v/@spare-technologies/spare-typescript-sdk)
+![Test and analyse workflow](https://github.com/spare-technologies/typescript-sdk/actions/workflows/dev_build_and_analyse.yml/badge.svg)
+![Build and deploy workflow](https://github.com/spare-technologies/typescript-sdk/actions/workflows/master_build_and_deploy.yml/badge.svg)
 ### Usage
 
 #### I- Download npm package
 
 ```bash
-npm install <package_name>
+npm i @spare-technologies/spare-typescript-sdk
 ```
 
 #### II- To Generate ECC key pair
@@ -28,12 +30,16 @@ import * as sdk from '@spare-technologies/spare-typescript-sdk'
 const PrivateKey = 'Your ecc private key';
 const ServerPublicKey = 'Spare ecc public key'
 
+const client = sdk.SpPaymentClient({
+    appid
+})
+
 // Configure client
 const client = new sdk.SpPaymentClient(
     {
-            ApiKey : "Your api key",
-            AppId : "Your app id",
-            BaseUrl : "https://payment.tryspare.com"
+        apiKey: "Your api key",
+        appId: "Your app id",
+        baseUrl:  "https://payment.tryspare.com"
     });
 
 // Initialize payment
