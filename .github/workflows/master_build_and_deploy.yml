@@ -27,12 +27,6 @@ jobs:
           sudo apt install -y wget npm &>/dev/null
           sudo npm i -g npm &>/dev/null
 
-      - name: Extract version
-        run: |
-          cd Spare.NET.Sdk
-          version=$(echo $(cat Spare.NET.Sdk.csproj | grep PackageVersion | grep -E -o '[0-9.]') | sed 's/[[:blank:]][[:blank:]]*//g')
-          echo "VERSION_NAME=$version" >> $GITHUB_ENV
-
       - name: Build
         run: |
           npm i --save && npm run cleanAndBuild
@@ -46,7 +40,3 @@ jobs:
           package_version=$(cat package.json | jq -r '.version')
           [ -f "spare-technologies-spare-typescript-sdk-$package_version.tgz" ] || exit 1
           npm publish "spare-technologies-spare-typescript-sdk-$package_version.tgz" --access=public
-          
-          
-
-
