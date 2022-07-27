@@ -29,6 +29,7 @@ jobs:
 
       - name: Build
         run: |
+          mv README.npm.md README.md
           npm i --save && npm run cleanAndBuild
 
       - name: Deploy
