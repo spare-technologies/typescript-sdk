@@ -1,10 +1,14 @@
 {
   "name": "@spare-technologies/spare-typescript-sdk",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Spare type script sdk",
   "author": {
     "email": "dev@tryspare.com",
     "name": "Hasni Mehdi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:spare-technologies/typescript-sdk.git"
   },
   "keywords": [
     "payment",
