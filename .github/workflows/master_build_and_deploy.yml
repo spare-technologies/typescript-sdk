@@ -1,0 +1,52 @@
+name: Build and deploy
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build_and_deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - uses: actions/checkout@v3
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install requirements
+        run: |
+          sudo apt update  &>/dev/null
+          sudo apt install -y wget npm &>/dev/null
+          sudo npm i -g npm &>/dev/null
+
+      - name: Extract version
+        run: |
+          cd Spare.NET.Sdk
+          version=$(echo $(cat Spare.NET.Sdk.csproj | grep PackageVersion | grep -E -o '[0-9.]') | sed 's/[[:blank:]][[:blank:]]*//g')
+          echo "VERSION_NAME=$version" >> $GITHUB_ENV
+
+      - name: Build
+        run: |
+          npm i --save && npm run cleanAndBuild
+
+      - name: Deploy
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
+          [ -d dist ] || exit 1 && npm pack 
+          package_version=$(cat package.json | jq -r '.version')
+          [ -f "spare-technologies-spare-typescript-sdk-$package_version.tgz" ] || exit 1
+          npm publish "spare-technologies-spare-typescript-sdk-$package_version.tgz" --access public
+          
+          
+
+
