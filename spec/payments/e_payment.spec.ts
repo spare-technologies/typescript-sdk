@@ -97,6 +97,8 @@ describe('Test Payment Api', () => {
 
         expect(isEmptyOrWhiteSpace(paymentResponse.payment?.link)).toBe(false)
 
+        expect(isNullOrUndefined(paymentResponse.payment?.status)).toBe(false)
+
         if (testEnvironment?.debugMode == true) {
             console.log(paymentResponse.toJsonString(false))
         }
@@ -157,6 +159,8 @@ describe('Test Payment Api', () => {
         expect(isEmptyOrWhiteSpace(paymentResponse.payment?.debtor?.account?.phone)).toBe(false)
 
         expect(isNullOrUndefined(paymentResponse.payment?.issuer)).toBe(true)
+
+        expect(isNullOrUndefined(paymentResponse.payment?.status)).toBe(false)
 
         if (testEnvironment?.debugMode == true) {
             console.log(paymentResponse.toJsonString(false))

@@ -4,6 +4,7 @@ import {JsonProperty, JsonObject} from 'typescript-json-serializer';
 
 import {SpPaymentSource} from "../../../Enum/Payment/SpPaymentSource";
 import {SpPaymentIssuer} from "../Account/SpPaymentIssuer";
+import {SpPaymentStatus} from "../../../Enum/Payment/SpPaymentStatus";
 
 @JsonObject()
 export class SpDomesticPaymentResponse extends SpDomesticPayment {
@@ -30,6 +31,9 @@ export class SpDomesticPaymentResponse extends SpDomesticPayment {
 
     @JsonProperty({name: 'createdAt'})
     public createdAt?: string | null;
+
+    @JsonProperty({name: 'status'})
+    public status?: SpPaymentStatus | null
 
     constructor(amount: number, description: string | null = null) {
         super(amount, description);
